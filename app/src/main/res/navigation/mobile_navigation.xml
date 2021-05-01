@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_wudhu">
+
+    <fragment
+        android:id="@+id/navigation_wudhu"
+        android:name="com.susanah.mywudhu.ui.wudhu.WudhuFragment"
+        android:label="@string/title_wudhu"
+        tools:layout="@layout/fragment_wudhu" />
+    <fragment
+        android:id="@+id/navigation_sholat"
+        android:name="com.susanah.mywudhu.ui.sholat.SholatFragment"
+        android:label="@string/title_sholat"
+        tools:layout="@layout/fragment_sholat" />
+    <fragment
+        android:id="@+id/navigation_surat"
+        android:name="com.susanah.mywudhu.ui.surat.SuratPendekFragment"
+        android:label="@string/title_surat"
+        tools:layout="@layout/fragment_surat_pendek" >
+        <action
+            android:id="@+id/action_suratPendekFragment_to_detailSurahFragment"
+            app:destination="@id/navigation_detail_surah" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_kuis"
+        android:name="com.susanah.mywudhu.ui.kuis.KuisFragment"
+        android:label="@string/title_kuis_cerdas"
+        tools:layout="@layout/fragment_kuis" />
+    <fragment
+        android:id="@+id/navigation_detail_surah"
+        android:name="com.susanah.mywudhu.ui.surat.detail.DetailSurahFragment"
+        android:label="fragment_detail_surah"
+        tools:layout="@layout/fragment_detail_surah" >
+        <argument
+            android:name="surat"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="1" />
+    </fragment>
+</navigation>

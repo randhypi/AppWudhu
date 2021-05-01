@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AppWudhu</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_surat">Surat</string>
+    <string name="title_wudhu">Wudhu</string>
+    <string name="title_surat_pendek">Surat Pendek</string>
+    <string name="title_kuis_cerdas">Kuis Cerdas</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_sholat">Sholat</string>
+    <string name="detail">Detail Surah</string>
+</resources>
