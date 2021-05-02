@@ -7,6 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import androidx.viewpager2.widget.ViewPager2
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,9 +17,12 @@ class MainActivity : AppCompatActivity() {
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
        supportActionBar!!.hide()
         val navController = findNavController(R.id.nav_host_fragment)
+
+
         val appBarConfiguration = AppBarConfiguration(setOf(
                 R.id.navigation_wudhu,R.id.navigation_sholat, R.id.navigation_surat,R.id.navigation_kuis))
         setupActionBarWithNavController(navController, appBarConfiguration)
+
         navView.setupWithNavController(navController)
     }
 }

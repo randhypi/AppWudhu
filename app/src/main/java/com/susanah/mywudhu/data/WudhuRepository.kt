@@ -27,11 +27,10 @@ class WudhuRepository private constructor(private val remoteDataSource: RemoteDa
                 for (response in responseAllSurah.data!!) {
 
                     val numberSurah = response?.number
-                    val name = response?.englishName
-                    val ayat = response?.numberOfAyahs
+                    val name = response?.name?.transliteration?.id
 
                     val surah =
-                        SurahModel(number = numberSurah, englishName = name, numberOfAyahs = ayat)
+                        SurahModel(number = numberSurah, englishName = name)
 
                     surahArrayList.add(surah)
                 }
@@ -46,26 +45,22 @@ class WudhuRepository private constructor(private val remoteDataSource: RemoteDa
 
         remoteDataSource.getDetailSurah(id, object : RemoteDataSource.LoadDetailSurahCallback {
             override fun onDetailSurahReceived(responseDetailSurah: ResponseDetailSurah) {
-                remoteDataSource.getTranslate(id, object : RemoteDataSource.LoadTranslateCallback {
-                    override fun onTranslateReceived(responseTranslate: ResponseDetailSurah) {
-                        val surahArrayList = ArrayList<SurahDetailModel>()
-                        for (response in responseDetailSurah?.data?.ayahs!!){
-                            for (responseTranslate in responseTranslate?.data?.ayahs!!){
-                                val ayat = response?.numberInSurah.toString()
-                                val textArab = response?.text
-                                val textId = responseTranslate?.text
-                                val nameSurah = responseDetailSurah?.data?.englishName
-                                val jmlAyat = responseDetailSurah?.data?.numberOfAyahs.toString()
-                                val juz = response?.juz.toString()
+                val surahArrayList = ArrayList<SurahDetailModel>()
+                for (response in responseDetailSurah?.data?.verses!!) {
+                    val ayat = response?.number?.inSurah?.toString()
+                    val textArab = response?.text?.arab
+                    val textId = response?.text?.transliteration?.en
+                    val translate = response?.translation?.id
+                    val nameSurah = responseDetailSurah?.data?.name?.transliteration?.id
+                    val jmlAyat = responseDetailSurah?.data?.numberOfVerses.toString()
+                    val juz = response?.meta?.juz.toString()
+                    val noSurat = response?.number.toString()
 
-                                val surah = SurahDetailModel(nameSurah,jmlAyat,textArab,textId,ayat,juz)
+                    val surah = SurahDetailModel(nameSurah,jmlAyat,textArab,textId,ayat,juz,translate,noSurat)
 
-                                surahArrayList.add(surah)
-                            }
-                        }
-                        surah.postValue(surahArrayList)
-                    }
-                })
+                    surahArrayList.add(surah)
+                }
+                surah.postValue(surahArrayList)
             }
         })
         return surah

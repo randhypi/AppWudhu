@@ -34,7 +34,6 @@ class SuratPendekFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
         showGridAdapter()
-
     }
 
     private fun showGridAdapter() {
@@ -47,7 +46,6 @@ class SuratPendekFragment : Fragment() {
         binding.rvSurahList.adapter = suratAdapter
 
         viewModel.getSurah().observe(viewLifecycleOwner,{surat ->
-            // Log.d(TAG,"${movies[0].original_title} home list")
             suratAdapter.setData(surat as ArrayList<SurahModel>)
         })
 

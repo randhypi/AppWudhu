@@ -8,7 +8,7 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/myToolbar"
-        android:background="@color/purple_500"
+        android:background="@color/darkGreen"
         app:titleTextColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,38 +17,64 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <TextView
-        android:id="@+id/tv_namaSurat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/myToolbar"
-        tools:text="An-Nas" />
 
-    <TextView
-        android:id="@+id/tv_juz"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/container_header"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_namaSurat"
-        tools:text="Surat ke - 114" />
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_surah_detail"
+        android:backgroundTint="@color/green4"
+        android:elevation="50dp"
+        android:orientation="vertical"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/myToolbar"
+        tools:layout_editor_absoluteX="-46dp">
 
-    <TextView
-        android:id="@+id/tv_ayat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_juz"
-        tools:text="6 Ayat" />
+        <TextView
+            android:id="@+id/tv_namaSurat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:elevation="10dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="An-Nas" />
+
+        <TextView
+            android:id="@+id/tv_noSUrat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:textSize="15sp"
+            tools:text="Surat ke - 114" />
+
+        <TextView
+            android:id="@+id/tv_juz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:textSize="15sp"
+            tools:text="Juz ke - 114" />
+
+        <TextView
+            android:id="@+id/tv_ayat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:textSize="14sp"
+            tools:text="6 Ayat" />
+
+
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSurahList"
@@ -58,7 +84,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_ayat"
+        app:layout_constraintTop_toBottomOf="@+id/container_header"
         tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

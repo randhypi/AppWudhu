@@ -1,5 +1,6 @@
 package com.susanah.mywudhu.ui.surat.detail
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -47,6 +48,7 @@ class DetailSurahFragment : Fragment() {
     }
 
 
+    @SuppressLint("SetTextI18n")
     private fun showGridAdapter(surat: String) {
         val navController = findNavController()
         (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
@@ -79,9 +81,11 @@ class DetailSurahFragment : Fragment() {
         viewModel.getDetailSurah(surat).observe(viewLifecycleOwner,{surat ->
             // Log.d(TAG,"${movies[0].original_title} home list")
             detailSuratAdapter.setData(surat as ArrayList<SurahDetailModel>)
+            Log.d(" DETAIL SURAH","$surat")
             binding.tvNamaSurat.text = surat[0].nameSurah
-            binding.tvAyat.text = surat[0].jumlahAyat
-            binding.tvJuz.text = surat[0].juz
+            binding.tvAyat.text = "${surat[0].jumlahAyat} Ayat"
+            binding.tvJuz.text = "Juz ${surat[0].juz}"
+            binding.tvNoSUrat.text = "Surat ke - ${surat[0].noSurat}"
         })
 
     }

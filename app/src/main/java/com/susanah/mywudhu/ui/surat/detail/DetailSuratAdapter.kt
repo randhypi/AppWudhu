@@ -37,9 +37,10 @@ class DetailSuratAdapter : RecyclerView.Adapter<DetailSuratAdapter.ListViewHolde
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val binding = ItemsSurahDetailBinding.bind(itemView)
         fun bind(userItem: SurahDetailModel) {
-            binding.surah.text = userItem.ayat
-            binding.ayat.text = userItem.textId
-
+            binding.surah.text = userItem.textArab
+            binding.ayat.text = userItem.ayat
+            binding.tvBacaan.text = userItem.textId
+            binding.tvTerjemahan.text = userItem.translate
         }
     }
 

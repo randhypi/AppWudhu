@@ -16,7 +16,7 @@ class ApiConfig {
                 .build()
 
             val retrofit = Retrofit.Builder()
-                .baseUrl("https://api.alquran.cloud/")
+                .baseUrl("https://api.quran.sutanlab.id/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()

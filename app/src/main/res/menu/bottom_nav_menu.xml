@@ -8,12 +8,12 @@
 
     <item
         android:id="@+id/navigation_wudhu"
-        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:icon="@drawable/ic_water_24"
         android:title="@string/title_wudhu" />
 
     <item
         android:id="@+id/navigation_surat"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:icon="@drawable/ic_alquran_24"
         android:title="@string/title_surat_pendek" />
 
     <item

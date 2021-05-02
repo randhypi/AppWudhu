@@ -85,33 +85,6 @@ class RemoteDataSource private constructor(private val context: Context) {
         })
     }
 
-    fun getTranslate(id: String, callback: LoadTranslateCallback){
-        var service: ApiServices = ApiConfig.getApiService()
-        val callDetailSurah: Call<ResponseDetailSurah> = service.getSurahDetailTranslate(id)
-        callDetailSurah.enqueue(object : Callback<ResponseDetailSurah> {
-            override fun onResponse(
-                call: Call<ResponseDetailSurah>,
-                response: Response<ResponseDetailSurah>
-            ) {
-                try {
-                    if (!response.isSuccessful) {
-                        Log.d(TAG, response.code().toString())
-                        return
-                    }
-                    response.body().let {
-                        it?.let {
-                            callback.onTranslateReceived(it)
-                        }
-                    }
-                } catch (e: Exception) {
-                    Toast.makeText(context,"Data tidak ditemukan : $e\n ",Toast.LENGTH_SHORT).show()
-                }
-            }
-            override fun onFailure(call: Call<ResponseDetailSurah>, t: Throwable) {
-                Toast.makeText(context,"Data tidak ditemukan : $call\n $t",Toast.LENGTH_SHORT).show()
-            }
-        })
-    }
 
 
 
@@ -123,7 +96,5 @@ class RemoteDataSource private constructor(private val context: Context) {
         fun onDetailSurahReceived(responseDetailSurah: ResponseDetailSurah)
     }
 
-    interface LoadTranslateCallback{
-        fun onTranslateReceived(responseDetailSurah: ResponseDetailSurah)
-    }
+
 }

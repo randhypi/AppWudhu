@@ -11,5 +11,7 @@ data class SurahDetailModel(
         val textArab: String?= "",
         val textId: String? = "",
         val ayat: String? ="",
-        val juz: String? = ""
+        val juz: String? = "",
+        val translate: String? = "",
+        val noSurat:String? = ""
 ): Parcelable
