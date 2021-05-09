@@ -51,7 +51,7 @@ class SuratPendekFragment : Fragment() {
 
 
         suratAdapter.setOnItemClickCallback(object : SuratAdapter.OnItemClickCallback{
-            override fun onItemClicked(data: String?) {
+            override fun onItemClicked(data: String) {
                 if (data != null) {
                     selectedSurat(data)
                 }

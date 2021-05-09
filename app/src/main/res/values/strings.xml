@@ -5,10 +5,11 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_surat">Surat</string>
     <string name="title_wudhu">Wudhu</string>
-    <string name="title_surat_pendek">Al-Qur.an</string>
+    <string name="title_surat_pendek">Al-Qur\'an</string>
     <string name="title_kuis_cerdas">Kuis Cerdas</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_sholat">Sholat</string>
     <string name="detail">Detail Surah</string>
+    <string name="pilihan_ganda">Pilihan ganda</string>
 </resources>

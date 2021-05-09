@@ -48,6 +48,6 @@ class SuratAdapter : RecyclerView.Adapter<SuratAdapter.ListViewHolder>() {
     }
 
     interface OnItemClickCallback {
-        fun onItemClicked(data: String?)
+        fun onItemClicked(data: String)
     }
 }

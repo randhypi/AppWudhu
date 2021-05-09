@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.susanah.mywudhu.data.WudhuRepository
 import com.susanah.mywudhu.di.Injection
+import com.susanah.mywudhu.ui.kuis.KuisViewModel
 import com.susanah.mywudhu.ui.surat.SuratPendekViewModel
 import com.susanah.mywudhu.ui.surat.detail.SurahDetailViewModel
 
@@ -30,6 +31,9 @@ class ViewModelFactory private constructor(private val mWudhuRepository: WudhuRe
             }
             modelClass.isAssignableFrom(SurahDetailViewModel::class.java) -> {
                 return SurahDetailViewModel(mWudhuRepository) as T
+            }
+            modelClass.isAssignableFrom(KuisViewModel::class.java) -> {
+                return KuisViewModel() as T
             }
 
 
