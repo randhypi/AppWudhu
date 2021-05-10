@@ -6,6 +6,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class KuisCerdasModel(
+    var no: Int? = 0,
     val soal: String? = "Tidak ada soal",
     val a: String? = "tidak ada pilihan",
     val b: String? = "tidak ada pilihan",

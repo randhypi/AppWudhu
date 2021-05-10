@@ -10,6 +10,7 @@ object DummyKuisCerdas {
 //        1
         kuis.add(
             KuisCerdasModel(
+                1,
                 soal = "1. Bagian yang dibasuh setelah muka ketika wudhu adalah ….",
                 a = "a. Rambut kepala",
                 "b. Kedua telinga",
@@ -21,6 +22,7 @@ object DummyKuisCerdas {
 //        2
         kuis.add(
             KuisCerdasModel(
+                2,
                 "2. Jika buang air kecil maka wudhu kita menjadi …",
                 "a. Batal",
                 "b. Sah",
@@ -32,6 +34,7 @@ object DummyKuisCerdas {
 //        3
         kuis.add(
             KuisCerdasModel(
+                3,
                 "3. Yang terakhir dibasuh ketika wudhu adalah ….",
                 "a. Kedua tangan",
                 "b. Kedua kaki",
@@ -43,6 +46,7 @@ object DummyKuisCerdas {
 //        4
         kuis.add(
             KuisCerdasModel(
+                4,
                 "4. Rukun wudhu jumlahnya ada ….",
                 "a. 4",
                 "b. 5",
@@ -54,6 +58,7 @@ object DummyKuisCerdas {
 
         kuis.add(
             KuisCerdasModel(
+                5,
                 "5 . Mengusap kedua telinga termasuk …. wudhu.",
                 "a. Rukun wudhu",
                 "b. Sunah wudhu",
@@ -65,6 +70,7 @@ object DummyKuisCerdas {
 
         kuis.add(
             KuisCerdasModel(
+                6,
                 "6. Jika tidak air maka kita bisa mengganti wudhu dengan cara ….",
                 "a. Tayamum",
                 "b. Ijtihat",
@@ -76,6 +82,7 @@ object DummyKuisCerdas {
 
         kuis.add(
             KuisCerdasModel(
+                7,
                 "7. Kita berwudhu menggunakan ….",
                 "a. Batu",
                 "b. Air",
@@ -86,7 +93,7 @@ object DummyKuisCerdas {
             )
         )
         kuis.add(
-            KuisCerdasModel(
+            KuisCerdasModel(8,
                 "8. Wudhu dapat menghilangkan hadas ….",
                 "a. Besar",
                 "b. Kecil",
@@ -98,7 +105,7 @@ object DummyKuisCerdas {
         )
 
         kuis.add(
-            KuisCerdasModel(
+            KuisCerdasModel(9,
                 "9. Wudhu membuat tubuh kita menjadi ….",
                 "a. Sakit",
                 "b. Kecil",
@@ -108,7 +115,7 @@ object DummyKuisCerdas {
             )
         )
         kuis.add(
-            KuisCerdasModel(
+            KuisCerdasModel(10,
                 "10. Rukun wudhu yang pertama adalah ….",
                 "a. Membaca niat",
                 "b. Berkumur",
@@ -118,7 +125,7 @@ object DummyKuisCerdas {
             )
         )
         kuis.add(
-            KuisCerdasModel(
+            KuisCerdasModel(11,
                 "11. Saat wudhu membasuh tangan harus sampai ….",
                 "a. Bahu",
                 "b. Siku",
@@ -129,7 +136,7 @@ object DummyKuisCerdas {
         )
 
         kuis.add(
-            KuisCerdasModel(
+            KuisCerdasModel(12,
                 "12. Saat wudhu kita disunahkan membaca ….",
                 "a. Koran",
                 "b. Buku pelajaran",
@@ -140,7 +147,7 @@ object DummyKuisCerdas {
         )
 
         kuis.add(
-            KuisCerdasModel(
+            KuisCerdasModel(13,
                 "13. Kita harus wudhu dengan air yang ….",
                 "a. Banyak",
                 "b. Suci",
@@ -152,6 +159,7 @@ object DummyKuisCerdas {
 
         kuis.add(
             KuisCerdasModel(
+                14,
                 "14.  Berkumur adalah contoh ….",
                 "a. Rukun wudhu",
                 "b. Sunah wudhu",
@@ -164,6 +172,7 @@ object DummyKuisCerdas {
 
         kuis.add(
             KuisCerdasModel(
+                15,
                 "15. Ketika wudhu kita disunahkan mendahulukan anggota tubuh yang ….",
                 "a. Kanan",
                 "b. Kiri",
@@ -175,6 +184,7 @@ object DummyKuisCerdas {
 
         kuis.add(
             KuisCerdasModel(
+                16,
                 "16. Dibawah ini yang tidak termasuk rukun wudhu adalah ….",
                 "a. Membasuh muka",
                 "b. Mengusap perut",
@@ -187,6 +197,7 @@ object DummyKuisCerdas {
 
         kuis.add(
             KuisCerdasModel(
+                17,
                 "17 Membasuh mata kaki harus sampai bagian ….",
                 "a. Lutut",
                 "b. Pupu",
@@ -198,6 +209,7 @@ object DummyKuisCerdas {
 
         kuis.add(
             KuisCerdasModel(
+                18,
                 "18. Setelah membasuh tangan selanjutnya adalah mengusap ….",
                 "a. Rambut kaki",
                 "b. Jenggot",
@@ -209,6 +221,7 @@ object DummyKuisCerdas {
         )
         kuis.add(
             KuisCerdasModel(
+                19,
                 "19. Air yang tidak bisa kita pakai berwudhu seperti air ….",
                 "a. Air selokan kotor",
                 "b. Air sumur",
@@ -220,6 +233,7 @@ object DummyKuisCerdas {
         )
         kuis.add(
             KuisCerdasModel(
+                20,
                 "20. Saat membasuh tangan maka sebaiknya kita ….",
                 "a. Membersih sela-sela jari",
                 "b. Melakukannya dengan cepat",
@@ -231,6 +245,7 @@ object DummyKuisCerdas {
         )
         kuis.add(
             KuisCerdasModel(
+                21,
                 "21. Berkumur-kumur dapat membersihkan mulut kita dari ….",
                 "a. Kerikil",
                 "b. Debu",
@@ -241,7 +256,7 @@ object DummyKuisCerdas {
             )
         )
         kuis.add(
-            KuisCerdasModel(
+            KuisCerdasModel(22,
                 "22. Dibawah ini yang tidak termasuk sunah wudhu adalah ….",
                 "a. Berkumur",
                 "b. Membaca basmalah",
@@ -252,7 +267,7 @@ object DummyKuisCerdas {
             )
         )
         kuis.add(
-            KuisCerdasModel(
+            KuisCerdasModel(23,
                 "23. Sunah wudhu ketika membasuh tangan dan kaki adalah sebanyak ….",
                 "a. 2 kali",
                 "b. 3 kali",
@@ -264,7 +279,7 @@ object DummyKuisCerdas {
         )
 
         kuis.add(
-            KuisCerdasModel(
+            KuisCerdasModel(24,
                 "24. Yang bisa membatalkan wudhu contohnya adalah ….",
                 "a. Berlari",
                 "b. Berbicara",
@@ -277,8 +292,8 @@ object DummyKuisCerdas {
 
 //        Sholat
         kuis.add(
-            KuisCerdasModel(
-                "26.    Shalat yang dianjurkan untuk mengerjakannya adalah....",
+            KuisCerdasModel(25,
+                "25. Shalat yang dianjurkan untuk mengerjakannya adalah....",
                 "a. Shalat wajib  ",
                 "b. Shalat sunah",
                 "c. Shalat maghrib",
@@ -288,8 +303,8 @@ object DummyKuisCerdas {
         )
 
         kuis.add(
-            KuisCerdasModel(
-                "27.    Pelaksanaan shalat sunnah terbagi menjadi dua. Yaitu .... dan ....",
+            KuisCerdasModel(26,
+                "26.    Pelaksanaan shalat sunnah terbagi menjadi dua. Yaitu .... dan ....",
                 "a. Munfarid ( sendiri ) dan berjamaah",
                 "b. Munfarid ( sendiri ) dan bergantian",
                 "c. Bergantian dan berjama’ah",
@@ -299,8 +314,8 @@ object DummyKuisCerdas {
         )
 
         kuis.add(
-            KuisCerdasModel(
-                "28. Shalat sunah yang dilaksanakan secara individu atau sendiri adalah....",
+            KuisCerdasModel(27,
+                "27. Shalat sunah yang dilaksanakan secara individu atau sendiri adalah....",
                 "a. Shalat sunah munfarid",
                 "b. Shalat sunah berjama’ah",
                 "c. Shalat sunah istisqa",
@@ -310,8 +325,8 @@ object DummyKuisCerdas {
         )
 
         kuis.add(
-            KuisCerdasModel(
-                "29 . Wudhu adalah contoh bahwa agama islam mengajarkan menjaga ….",
+            KuisCerdasModel(28,
+                "28 . Wudhu adalah contoh bahwa agama islam mengajarkan menjaga ….",
                 "a. Kebaikan",
                 "b. Kebajikan",
                 "c. Kebersihan",
@@ -321,8 +336,8 @@ object DummyKuisCerdas {
         )
 
         kuis.add(
-            KuisCerdasModel(
-                "30. Shalat istikharah adalah shalat yang bertujuan untuk....",
+            KuisCerdasModel(29,
+                "29. Shalat istikharah adalah shalat yang bertujuan untuk....",
                 "a. Menghormati masjid",
                 "b. Memohon hujan",
                 "c. Memohon petunjuk terbaik diantara dua pilihan",
@@ -333,8 +348,8 @@ object DummyKuisCerdas {
         )
 
         kuis.add(
-            KuisCerdasModel(
-                "31. Shalat sunah yang dilaksanakan setelah shalat isya sampai waktu fajar di bulan ramadhan adalah....",
+            KuisCerdasModel(30,
+                "30. Shalat sunah yang dilaksanakan setelah shalat isya sampai waktu fajar di bulan ramadhan adalah....",
                 "a. Shalat Witir",
                 "b. Shalat Tarawih",
                 "c. Shalat Tahajjud",
@@ -343,50 +358,7 @@ object DummyKuisCerdas {
             )
         )
 
-        kuis.add(
-            KuisCerdasModel(
-                "32 . Berikut ini merupakan keutamaan shalat tahajjud, kecuali....",
-                "a. Mengobati diri dari penyakit rohani",
-                "b. Mengobati diri dari penyakit jasmani",
-                "c. Dapat mencegah diri dari perbuatan dosa",
-                "d. Dapat membentuk karakter/kepribadian orang saleh",
-                "a"
-            )
-        )
 
-        kuis.add(
-            KuisCerdasModel(
-                "33. Hukum melaksanakan shalat 5 waktu adalah ...",
-                "a. Sunnah Mu'akad",
-                "b. Fardhu Kifayah",
-                "c. Fardhu ‘Ain	",
-                "d. Makruh",
-                "c"
-            )
-        )
-
-        kuis.add(
-            KuisCerdasModel(
-                "34. Shalat yang dilakukan setelah tergelincir matahari adalah ...",
-                "a. Magrib",
-                "b. Dhuhur",
-                "c. Isya’",
-                "d. Subuh",
-                "a"
-            )
-        )
-
-        kuis.add(
-            KuisCerdasModel(
-                "35. Jumlah rakaat shalat 5 waktu dalam sehari semalam adalah ...",
-                "a. 14",
-                "b. 17",
-                "c. 19",
-                "d. 16",
-                "b"
-
-            )
-        )
 
         return kuis
     }

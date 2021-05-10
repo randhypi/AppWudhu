@@ -10,34 +10,22 @@ import androidx.recyclerview.widget.RecyclerView
 import com.susanah.mywudhu.R
 import com.susanah.mywudhu.data.model.KuisCerdasModel
 import com.susanah.mywudhu.databinding.ItemsKuisBinding
-import com.susanah.mywudhu.ui.surat.SuratAdapter
 
 class KuisAdapter : RecyclerView.Adapter<KuisAdapter.ListViewHolder>() {
 
 
     private val mData = ArrayList<KuisCerdasModel>()
 
-    private val lastCheckedRadioGroup: RadioGroup? = null
+    var position: Int = 0
+    var mSelectedItem:Int = -1
 
+    private var lastCheckedRadioGroup: RadioGroup? = null
 
     fun setData(items: ArrayList<KuisCerdasModel>) {
         mData.clear()
         mData.addAll(items)
         notifyDataSetChanged()
     }
-
-    private lateinit var onItemClickCallback: OnItemClickCallBack
-
-    interface OnItemClickCallBack {
-        fun onItemClicked(data: KuisCerdasModel)
-    }
-
-    fun setOnCLickCallBack(onItemClickCallBack: OnItemClickCallBack){
-        this.onItemClickCallback = onItemClickCallback
-    }
-
-
-
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ListViewHolder {
         val binding =
@@ -48,7 +36,24 @@ class KuisAdapter : RecyclerView.Adapter<KuisAdapter.ListViewHolder>() {
 
     override fun onBindViewHolder(listViewHolder: ListViewHolder, position: Int) {
         listViewHolder.bind(mData[position])
+         val _binding = ItemsKuisBinding.bind(listViewHolder.itemView)
+         val model = mData.get(position)
+        model.no?.let { _binding.rgSoal.check(it) }
+        _binding.rgSoal.setOnCheckedChangeListener(object :RadioGroup.OnCheckedChangeListener{
+            override fun onCheckedChanged(rg: RadioGroup?, i: Int) {
+                model.no = i
+                if (model.no == R.id.a ){
+                    _binding.a.isChecked = true
+                }else if (model.no == R.id.b){
+                    _binding.b.isChecked = true
+                }else if (model.no == R.id.c){
+                    _binding.c.isChecked = true
+                }else if (model.no == R.id.d){
+                    _binding.d.isChecked = true
+                }
 
+            }
+        })
     }
 
     override fun getItemCount(): Int = mData.size
@@ -57,6 +62,7 @@ class KuisAdapter : RecyclerView.Adapter<KuisAdapter.ListViewHolder>() {
         private val binding = ItemsKuisBinding.bind(itemView)
         fun bind(userItem: KuisCerdasModel) {
             binding.tvSoal.text = userItem.soal
+            val soalGroup: RadioGroup = binding.rgSoal
 
             val a = binding.a
             val b = binding.b
@@ -67,6 +73,29 @@ class KuisAdapter : RecyclerView.Adapter<KuisAdapter.ListViewHolder>() {
             b.text = userItem.b
             c.text = userItem.c
             d.text = userItem.d
+
+
+
+            a.setOnClickListener {
+
+            }
+
+            b.setOnClickListener {
+
+            }
+            c.setOnClickListener {
+
+            }
+            d.setOnClickListener {
+
+            }
+            soalGroup.setOnCheckedChangeListener(object : RadioGroup.OnCheckedChangeListener{
+                override fun onCheckedChanged(radioGroup: RadioGroup?, i: Int) {
+                }
+            })
+
+
+
         }
     }
 
