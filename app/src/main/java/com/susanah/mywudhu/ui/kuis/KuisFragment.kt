@@ -1,6 +1,7 @@
 package com.susanah.mywudhu.ui.kuis
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -16,6 +17,7 @@ import com.susanah.mywudhu.data.model.SurahModel
 import com.susanah.mywudhu.databinding.FragmentKuisBinding
 import com.susanah.mywudhu.ui.surat.SuratAdapter
 import com.susanah.mywudhu.viewModel.ViewModelFactory
+import okhttp3.internal.addHeaderLenient
 
 class KuisFragment : Fragment() {
 
@@ -55,9 +57,36 @@ class KuisFragment : Fragment() {
         binding.rvKuisList.adapter = kuisAdapter
 
         viewModel.getDummySoal()
-        viewModel.getSoal().observe(viewLifecycleOwner,{soal ->
+        viewModel.getSoal().observe(viewLifecycleOwner, { soal ->
             kuisAdapter.setData(soal as ArrayList<KuisCerdasModel>)
+            kuisAdapter.setOnItemClickCallback(object : KuisAdapter.OnItemClickCallback {
+                override fun onBottomReached(position: Int) {
+                    Log.d("Posistion", position.toString())
+                    if (position + 1 >= soal.size - 6) {
+                        binding.btnSelesai?.visibility = View.VISIBLE
+                        Log.d("Posistion", position.toString())
+                    } else if (position < soal.size) {
+                        binding.btnSelesai?.visibility = View.GONE
+
+                    }
+                }
+
+                override fun onDataAnswer(data: List<KuisCerdasModel>) {
+                    binding.btnSelesai.setOnClickListener {
+                        val listNilai = mutableListOf<Int>()
+                        for (i in 0 until data.size) {
+                           listNilai.add(data[i]?.nilai!!)
+                        }
+                        val nilai = listNilai.sum() / 3
+                        Log.d("Nilai list", listNilai.toString())
+                        Log.d("Nilai", nilai.toString())
+                    }
+                }
+
+            })
+
         })
+
 
     }
 

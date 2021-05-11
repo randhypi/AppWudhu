@@ -15,11 +15,24 @@ class KuisAdapter : RecyclerView.Adapter<KuisAdapter.ListViewHolder>() {
 
     private val mData = ArrayList<KuisCerdasModel>()
     private val mJawaban = mutableListOf<KuisCerdasModel>()
+    private lateinit var onItemClickCallback: OnItemClickCallback
 
     fun setData(items: ArrayList<KuisCerdasModel>) {
         mData.clear()
         mData.addAll(items)
         notifyDataSetChanged()
+    }
+
+
+
+    interface OnItemClickCallback {
+        fun onBottomReached(position: Int)
+        fun onDataAnswer(data: List<KuisCerdasModel>)
+
+    }
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ListViewHolder {
@@ -29,9 +42,17 @@ class KuisAdapter : RecyclerView.Adapter<KuisAdapter.ListViewHolder>() {
         return ListViewHolder(binding)
     }
 
+    override fun getItemViewType(position: Int): Int {
+        return position
+    }
+
     override fun onBindViewHolder(listViewHolder: ListViewHolder, position: Int) {
         listViewHolder.bind(mData[position])
         val _binding = ItemsKuisBinding.bind(listViewHolder.itemView)
+        val a = _binding.a
+        val b = _binding.b
+        val c = _binding.c
+        val d = _binding.d
         val model = mData.get(position)
         val no = model.no
         model.no?.let { _binding.rgSoal.check(it) }
@@ -41,6 +62,7 @@ class KuisAdapter : RecyclerView.Adapter<KuisAdapter.ListViewHolder>() {
 
                 if (model.no == R.id.a) {
                     _binding.a.isChecked = true
+                    a.isChecked
                     setAnswer(model.a?.get(0).toString(), model?.jawaban, no, model)
                 } else if (model.no == R.id.b) {
                     _binding.b.isChecked = true
@@ -54,12 +76,14 @@ class KuisAdapter : RecyclerView.Adapter<KuisAdapter.ListViewHolder>() {
                 }
             }
         })
+         onItemClickCallback.onBottomReached(position)
     }
 
     override fun getItemCount(): Int = mData.size
 
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val binding = ItemsKuisBinding.bind(itemView)
+
         fun bind(userItem: KuisCerdasModel) {
             binding.tvSoal.text = userItem.soal
             val soalGroup: RadioGroup = binding.rgSoal
@@ -68,7 +92,6 @@ class KuisAdapter : RecyclerView.Adapter<KuisAdapter.ListViewHolder>() {
             val b = binding.b
             val c = binding.c
             val d = binding.d
-
 
             a.text = userItem.a
             b.text = userItem.b
@@ -119,6 +142,9 @@ class KuisAdapter : RecyclerView.Adapter<KuisAdapter.ListViewHolder>() {
                 }
             }
         }
+        onItemClickCallback.onDataAnswer(mJawaban)
     }
+
+
 
 }
