@@ -12,6 +12,7 @@ data class KuisCerdasModel(
     val b: String? = "tidak ada pilihan",
     val c: String? = "tidak ada pilihan",
     val d: String?= "tidak ada pilihan",
-    val jawaban: String? = "tidak ada jawaban"
-
+    val jawaban: String? = null,
+    var myAnswer: String? = null,
+    var nilai: Int? = null
 ): Parcelable

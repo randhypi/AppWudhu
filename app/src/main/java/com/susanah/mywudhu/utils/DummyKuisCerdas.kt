@@ -11,8 +11,8 @@ object DummyKuisCerdas {
         kuis.add(
             KuisCerdasModel(
                 1,
-                soal = "1. Bagian yang dibasuh setelah muka ketika wudhu adalah ….",
-                a = "a. Rambut kepala",
+                "1. Bagian yang dibasuh setelah muka ketika wudhu adalah ….",
+                "a. Rambut kepala",
                 "b. Kedua telinga",
                 "c. Kedua kaki",
                 "d. Kedua tangan",
