@@ -8,6 +8,7 @@ import com.susanah.mywudhu.di.Injection
 import com.susanah.mywudhu.ui.kuis.KuisViewModel
 import com.susanah.mywudhu.ui.surat.SuratPendekViewModel
 import com.susanah.mywudhu.ui.surat.detail.SurahDetailViewModel
+import com.susanah.mywudhu.ui.wudhu.WudhuViewModel
 
 class ViewModelFactory private constructor(private val mWudhuRepository: WudhuRepository) : ViewModelProvider.NewInstanceFactory() {
 
@@ -34,6 +35,9 @@ class ViewModelFactory private constructor(private val mWudhuRepository: WudhuRe
             }
             modelClass.isAssignableFrom(KuisViewModel::class.java) -> {
                 return KuisViewModel() as T
+            }
+            modelClass.isAssignableFrom(WudhuViewModel::class.java) -> {
+                return WudhuViewModel() as T
             }
 
 

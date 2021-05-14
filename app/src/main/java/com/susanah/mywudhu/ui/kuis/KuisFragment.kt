@@ -1,29 +1,29 @@
 package com.susanah.mywudhu.ui.kuis
 
+
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.RadioButton
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.susanah.mywudhu.R
 import com.susanah.mywudhu.data.model.KuisCerdasModel
-import com.susanah.mywudhu.data.model.SurahModel
+import com.susanah.mywudhu.databinding.DialogResultNilaiBinding
 import com.susanah.mywudhu.databinding.FragmentKuisBinding
-import com.susanah.mywudhu.ui.surat.SuratAdapter
 import com.susanah.mywudhu.viewModel.ViewModelFactory
-import okhttp3.internal.addHeaderLenient
 
 class KuisFragment : Fragment() {
 
     private var _binding: FragmentKuisBinding? = null
     private val binding get() = _binding!!
     private lateinit var kuisAdapter: KuisAdapter
+
 
 
     override fun onCreateView(
@@ -40,7 +40,6 @@ class KuisFragment : Fragment() {
 
         (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
         showGridAdapter()
-
 
 
     }
@@ -72,21 +71,50 @@ class KuisFragment : Fragment() {
                 }
 
                 override fun onDataAnswer(data: List<KuisCerdasModel>) {
-                    binding.btnSelesai.setOnClickListener {
-                        val listNilai = mutableListOf<Int>()
-                        for (i in 0 until data.size) {
-                           listNilai.add(data[i]?.nilai!!)
-                        }
-                        val nilai = listNilai.sum() / 3
-                        Log.d("Nilai list", listNilai.toString())
-                        Log.d("Nilai", nilai.toString())
-                    }
+                    setDialog(data)
                 }
-
             })
 
         })
 
+
+    }
+
+
+    fun setDialog(data: List<KuisCerdasModel>) {
+
+        binding.btnSelesai.setOnClickListener {
+            Log.d("SetDialog",data.toString())
+            val listNilai = mutableListOf<Int>()
+            var nilai = 0.0
+
+            if (data.isNullOrEmpty()){
+                Toast.makeText(context,"Silahkan Jawab dahulu sebelum klik selesai",Toast.LENGTH_LONG).show()
+            }else{
+                for (i in 0 until data.size) {
+                    listNilai.add(data[i]?.nilai!!)
+                }
+
+                nilai = listNilai.sum().toDouble() / 3
+            }
+
+            val mDialogView = layoutInflater.inflate(R.layout.dialog_result_nilai, null)
+            val bindingDialog = DialogResultNilaiBinding.bind(
+                mDialogView
+            )
+
+            val mBuilder = context?.let { context ->
+                AlertDialog.Builder(context)
+                    .setView(mDialogView)
+                    .setTitle("Nilai :")
+            }
+            val mAlertDialog = mBuilder?.show()
+            bindingDialog.tvResultNilai.text = String.format("%.1f", nilai)
+            bindingDialog.btnResultOke.setOnClickListener {
+                mAlertDialog?.dismiss()
+
+            }
+        }
 
     }
 

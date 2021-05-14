@@ -29,7 +29,6 @@ class KuisAdapter : RecyclerView.Adapter<KuisAdapter.ListViewHolder>() {
     interface OnItemClickCallback {
         fun onBottomReached(position: Int)
         fun onDataAnswer(data: List<KuisCerdasModel>)
-
     }
 
     fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
@@ -48,6 +47,7 @@ class KuisAdapter : RecyclerView.Adapter<KuisAdapter.ListViewHolder>() {
         val _binding = ItemsKuisBinding.bind(listViewHolder.itemView)
         posisi = position
         val soalGroup = _binding.rgSoal
+
         val a = _binding.a
         val b = _binding.b
         val c = _binding.c
@@ -75,10 +75,12 @@ class KuisAdapter : RecyclerView.Adapter<KuisAdapter.ListViewHolder>() {
                         d.isChecked = true
                         setAnswer(model.d?.get(0).toString(), model?.jawaban, no, model)
                     }
+                    null -> {
+                        setAnswer(null, model?.jawaban, no, model)
+                    }
                 }
             }
         })
-
 
         onItemClickCallback.onBottomReached(position)
     }
@@ -141,11 +143,12 @@ class KuisAdapter : RecyclerView.Adapter<KuisAdapter.ListViewHolder>() {
                         mJawaban.add(data)
                     }
                     for (m in 0 until mJawaban.size){
-                        Log.d("Kuis Adapter", "$no = ${myAnswer}   ${model.jawaban}\n ${mJawaban}")
+                        Log.d("Kuis Adapter", "$no = ${myAnswer}  ${model.jawaban}\n ${mJawaban}")
                     }
                 }
             }
         }
+
         onItemClickCallback.onDataAnswer(mJawaban)
     }
 
