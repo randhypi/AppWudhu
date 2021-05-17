@@ -93,7 +93,8 @@ object DummyKuisCerdas {
             )
         )
         kuis.add(
-            KuisCerdasModel(8,
+            KuisCerdasModel(
+                8,
                 "8. Wudhu dapat menghilangkan hadas ….",
                 "a. Besar",
                 "b. Kecil",
@@ -105,7 +106,8 @@ object DummyKuisCerdas {
         )
 
         kuis.add(
-            KuisCerdasModel(9,
+            KuisCerdasModel(
+                9,
                 "9. Wudhu membuat tubuh kita menjadi ….",
                 "a. Sakit",
                 "b. Kecil",
@@ -115,7 +117,8 @@ object DummyKuisCerdas {
             )
         )
         kuis.add(
-            KuisCerdasModel(10,
+            KuisCerdasModel(
+                10,
                 "10. Rukun wudhu yang pertama adalah ….",
                 "a. Membaca niat",
                 "b. Berkumur",
@@ -125,7 +128,8 @@ object DummyKuisCerdas {
             )
         )
         kuis.add(
-            KuisCerdasModel(11,
+            KuisCerdasModel(
+                11,
                 "11. Saat wudhu membasuh tangan harus sampai ….",
                 "a. Bahu",
                 "b. Siku",
@@ -136,7 +140,8 @@ object DummyKuisCerdas {
         )
 
         kuis.add(
-            KuisCerdasModel(12,
+            KuisCerdasModel(
+                12,
                 "12. Saat wudhu kita disunahkan membaca ….",
                 "a. Koran",
                 "b. Buku pelajaran",
@@ -147,7 +152,8 @@ object DummyKuisCerdas {
         )
 
         kuis.add(
-            KuisCerdasModel(13,
+            KuisCerdasModel(
+                13,
                 "13. Kita harus wudhu dengan air yang ….",
                 "a. Banyak",
                 "b. Suci",
@@ -256,7 +262,8 @@ object DummyKuisCerdas {
             )
         )
         kuis.add(
-            KuisCerdasModel(22,
+            KuisCerdasModel(
+                22,
                 "22. Dibawah ini yang tidak termasuk sunah wudhu adalah ….",
                 "a. Berkumur",
                 "b. Membaca basmalah",
@@ -267,7 +274,8 @@ object DummyKuisCerdas {
             )
         )
         kuis.add(
-            KuisCerdasModel(23,
+            KuisCerdasModel(
+                23,
                 "23. Sunah wudhu ketika membasuh tangan dan kaki adalah sebanyak ….",
                 "a. 2 kali",
                 "b. 3 kali",
@@ -279,7 +287,8 @@ object DummyKuisCerdas {
         )
 
         kuis.add(
-            KuisCerdasModel(24,
+            KuisCerdasModel(
+                24,
                 "24. Yang bisa membatalkan wudhu contohnya adalah ….",
                 "a. Berlari",
                 "b. Berbicara",
@@ -292,7 +301,8 @@ object DummyKuisCerdas {
 
 //        Sholat
         kuis.add(
-            KuisCerdasModel(25,
+            KuisCerdasModel(
+                25,
                 "25. Shalat yang dianjurkan untuk mengerjakannya adalah....",
                 "a. Shalat wajib  ",
                 "b. Shalat sunah",
@@ -303,7 +313,8 @@ object DummyKuisCerdas {
         )
 
         kuis.add(
-            KuisCerdasModel(26,
+            KuisCerdasModel(
+                26,
                 "26.    Pelaksanaan shalat sunnah terbagi menjadi dua. Yaitu .... dan ....",
                 "a. Munfarid ( sendiri ) dan berjamaah",
                 "b. Munfarid ( sendiri ) dan bergantian",
@@ -314,7 +325,8 @@ object DummyKuisCerdas {
         )
 
         kuis.add(
-            KuisCerdasModel(27,
+            KuisCerdasModel(
+                27,
                 "27. Shalat sunah yang dilaksanakan secara individu atau sendiri adalah....",
                 "a. Shalat sunah munfarid",
                 "b. Shalat sunah berjama’ah",
@@ -325,7 +337,8 @@ object DummyKuisCerdas {
         )
 
         kuis.add(
-            KuisCerdasModel(28,
+            KuisCerdasModel(
+                28,
                 "28 . Wudhu adalah contoh bahwa agama islam mengajarkan menjaga ….",
                 "a. Kebaikan",
                 "b. Kebajikan",
@@ -336,7 +349,8 @@ object DummyKuisCerdas {
         )
 
         kuis.add(
-            KuisCerdasModel(29,
+            KuisCerdasModel(
+                29,
                 "29. Shalat istikharah adalah shalat yang bertujuan untuk....",
                 "a. Menghormati masjid",
                 "b. Memohon hujan",
@@ -348,7 +362,8 @@ object DummyKuisCerdas {
         )
 
         kuis.add(
-            KuisCerdasModel(30,
+            KuisCerdasModel(
+                30,
                 "30. Shalat sunah yang dilaksanakan setelah shalat isya sampai waktu fajar di bulan ramadhan adalah....",
                 "a. Shalat Witir",
                 "b. Shalat Tarawih",
@@ -358,6 +373,234 @@ object DummyKuisCerdas {
             )
         )
 
+        kuis.add(
+            KuisCerdasModel(
+                31,
+                "31. Seorang laki-laki sah menjadi makmum kepada..",
+                "a. laki-laki ",
+                "b. wanita",
+                "c. anak kecil",
+                "d. semua benar",
+                "a"
+            )
+        )
+
+        kuis.add(
+            KuisCerdasModel(
+                32,
+                "32. Orang yang shalat di belakang imam disebut .....",
+                "a. amil",
+                "b. makmum",
+                "c. balig",
+                "d. masbuk",
+                "b"
+            )
+        )
+
+        kuis.add(
+            KuisCerdasModel(
+                33,
+                "33. Shalat berjamaah lebih baik dilaksanakan di .......",
+                "a. rumah",
+                "b. kos",
+                "c. masjid",
+                "d. semua salah",
+                "c"
+            )
+        )
+
+        kuis.add(
+            KuisCerdasModel(
+                34,
+                "34. Makmum yang tertinggal shalatnya disebut .......",
+                "a. makmum",
+                "b. masbuk",
+                "c. imam",
+                "d. mashur",
+                "b"
+            )
+        )
+
+        kuis.add(
+            KuisCerdasModel(
+                35,
+                "35. Makmum laki-laki mengingatkan imam yang lupa dengan ucapan .......",
+                "a. Subhanallah",
+                "b. Alhamdulillah",
+                "c. Allahu Akbar",
+                "d. Amiin",
+                "a"
+            )
+        )
+
+
+        kuis.add(
+            KuisCerdasModel(
+                36,
+                "36. Apabila imam rukuk, makmum harus ........",
+                "a. sujud",
+                "b. rukuk",
+                "c. berdiri",
+                "d. i’tidal",
+                "b"
+            )
+        )
+
+        kuis.add(
+            KuisCerdasModel(
+                37,
+                "37. Posisi antara imam dan makmum dalam shalat berjamaah haruslah ......",
+                "a. depan dan belakang",
+                "b. membelakangi",
+                "c. menjauh",
+                "d. semua benar",
+                "a"
+            )
+        )
+        kuis.add(
+            KuisCerdasModel(
+                38,
+                "38. Syarat sah menjadi makmum adalah niat mengikuti . . . .",
+                "a. imam",
+                "b. makmum",
+                "c. jamaah",
+                "d. shalat",
+                "a"
+            )
+        )
+        kuis.add(
+            KuisCerdasModel(
+                39,
+                "39. Makmum membaca Surah Al-Fatihah dengan suara . . . .",
+                "a. lantang",
+                "b. pelan",
+                "c. teriakan",
+                "d. keras",
+                "b"
+            )
+        )
+        kuis.add(
+            KuisCerdasModel(
+                40,
+                "40. Seseorang yang makruh menjadi imam adalah orang yang . .",
+                "a. sudah khitan",
+                "b. belum balig",
+                "c. bagus bacaan",
+                "d. semua salah",
+                "b"
+            )
+        )
+
+        kuis.add(
+            KuisCerdasModel(
+                41,
+                "41. Seseorang yang makruh menjadi imam adalah orang yang . .",
+                "a. sudah khitan",
+                "b. belum balig",
+                "c. bagus bacaan",
+                "d. semua salah",
+                "b"
+            )
+        )
+        kuis.add(
+            KuisCerdasModel(
+                42,
+                "42. Saat imam membaca Surah Al-Fatihah,makmum hendaknya ....",
+                "a. bercakap-cakap",
+                "b. tertawa",
+                "c. bergurau",
+                "d. mendengarkan",
+                "d"
+            )
+        )
+        kuis.add(
+            KuisCerdasModel(
+                43,
+                "43. Saat kita sedang shalat berjamaah kita tidak boleh . . . .",
+                "a. khusyuk",
+                "b. mengikuti",
+                "c. bergurau",
+                "d. semua salah",
+                "c"
+            )
+        )
+        kuis.add(
+            KuisCerdasModel(
+                44,
+                "44. Sebelum memulai shalat berjamaah, imam harus menertibkan ......",
+                "a. pakaian",
+                "b. saf/barisan",
+                "c. sarung dan peci",
+                "d. semua benar",
+                "b"
+            )
+        )
+        kuis.add(
+            KuisCerdasModel(
+                45,
+                "45. Hikmah shalat berjamaah antara lain adalah mendapat . . . .",
+                "a. banyak pahala",
+                "b. pujian",
+                "c. kesenangan",
+                "d. semua salah",
+                "a"
+            )
+        )
+        kuis.add(
+            KuisCerdasModel(
+                46,
+                "46. Orang yang berada di depan atau diikuti dalam shalat berjamaah disebut . . . . .",
+                "a. makmum",
+                "b. masbuk",
+                "c. imam",
+                "d. semua salah",
+                "c"
+            )
+        )
+        kuis.add(
+            KuisCerdasModel(
+                47,
+                "47. Mereka yang datang lebih awal sebaiknya mengisi barisan yang . .",
+                "a. belakang",
+                "b. terdepan",
+                "c. pojok",
+                "d. samping kiri",
+                "b"
+            )
+        )
+        kuis.add(
+            KuisCerdasModel(
+                48,
+                "48. Setelah wudhu jangan lupa untuk ….",
+                "a. Berdoa",
+                "b. Bermain",
+                "c. Belajar",
+                "d. Berlari",
+                "a"
+            )
+        )
+        kuis.add(
+            KuisCerdasModel(
+                49,
+                "49. Membicarakan keburukan orang lain dapat ….",
+                "a. Menambah pahala puasa",
+                "b. Menghilangkan pahala puasa",
+                "c.Menyulitkan saat puasa",
+                "d. Mempermudah menjalani puasa",
+                "b"
+            )
+        )
+        kuis.add(
+            KuisCerdasModel(
+                50,
+                "50. Waktu berbuka puasa adalah saat ….",
+                "a. Terbit fajar",
+                "b. Bunyi imsak",
+                "c. Matahari terbit",
+                "d. Matahari terbenam",
+                "d"
+            )
+        )
 
 
         return kuis

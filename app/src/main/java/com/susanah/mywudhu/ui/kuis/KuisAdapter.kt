@@ -82,6 +82,8 @@ class KuisAdapter : RecyclerView.Adapter<KuisAdapter.ListViewHolder>() {
             }
         })
 
+
+
         onItemClickCallback.onBottomReached(position)
     }
 
@@ -108,6 +110,8 @@ class KuisAdapter : RecyclerView.Adapter<KuisAdapter.ListViewHolder>() {
             b.text = userItem.b
             c.text = userItem.c
             d.text = userItem.d
+
+
         }
     }
 
@@ -151,7 +155,6 @@ class KuisAdapter : RecyclerView.Adapter<KuisAdapter.ListViewHolder>() {
 
         onItemClickCallback.onDataAnswer(mJawaban)
     }
-
 
 
 }

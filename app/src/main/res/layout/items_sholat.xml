@@ -1,130 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cv_item_sholat"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
     android:orientation="vertical"
     app:cardCornerRadius="25dp"
     app:cardElevation="4dp"
-    app:cardMaxElevation="4dp"
-    android:layout_marginBottom="10dp"
-   >
+    app:cardMaxElevation="4dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:id="@+id/item_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="WebViewLayout">
+        android:orientation="vertical">
 
 
         <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
-            android:id="@+id/wv_url_youtube_rakaat1"
-            android:layout_width="0dp"
+            android:id="@+id/wv_url_youtube_gerakan1"
+            android:layout_width="match_parent"
             android:layout_height="181dp"
-            app:autoPlay="false"
-            app:layout_constraintBottom_toTopOf="@+id/tv_sholat_rakaat1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:autoPlay="false" />
+
+        <ImageView
+            android:id="@+id/img_gerakan1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="@string/image_sholat_gerakan_1"
+            android:src="@color/green" />
+
 
         <TextView
-            android:id="@+id/tv_sholat_rakaat1"
-            android:layout_width="0dp"
+            android:id="@+id/tv_sholat_gerakan1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginBottom="8dp"
             android:textColor="@color/black"
             android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/wv_url_youtube_rakaat1"
             tools:text="Membaca Niat" />
 
+        <!--        Gerakan ke 2-->
         <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
-            android:id="@+id/wv_url_youtube_rakaat2"
-            android:layout_width="0dp"
+            android:id="@+id/wv_url_youtube_gerakan2"
+            android:layout_width="match_parent"
+            android:layout_height="181dp"
+            android:layout_marginTop="16dp"
+            app:autoPlay="false" />
+
+        <ImageView
+            android:id="@+id/img_gerakan2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="@string/image_sholat_gerakan_1"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@color/green" />
+
+        <TextView
+            android:id="@+id/tv_sholat_gerakan2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:text="Membaca Niat" />
+
+        <!--        Gerakan ke 3-->
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/wv_url_youtube_gerakan3"
+            android:layout_width="match_parent"
+            android:layout_height="181dp"
+            android:layout_marginTop="16dp"
+            app:autoPlay="false" />
+
+        <ImageView
+            android:id="@+id/img_gerakan3"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@color/green"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="@string/image_sholat_gerakan_1"
+            />
+
+        <TextView
+            android:id="@+id/tv_sholat_gerakan3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:text="Membaca Niat" />
+
+        <!--        Gerakan ke 4-->
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/wv_url_youtube_gerakan4"
+            android:layout_width="match_parent"
+            android:layout_height="181dp"
+            android:layout_marginTop="16dp"
+            app:autoPlay="false" />
+
+        <ImageView
+            android:id="@+id/img_gerakan4"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@color/green"
+            android:contentDescription="@string/image_sholat_gerakan_1"
+            />
+
+        <TextView
+            android:id="@+id/tv_sholat_gerakan4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:text="Membaca Niat" />
+
+        <!--        Gerakan ke 5-->
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/wv_url_youtube_gerakan5"
+            android:layout_width="match_parent"
             android:layout_height="181dp"
             android:layout_marginTop="8dp"
-            app:autoPlay="false"
-            app:layout_constraintBottom_toTopOf="@+id/tv_sholat_rakaat2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_sholat_rakaat1" />
+            app:autoPlay="false" />
+
+        <ImageView
+            android:id="@+id/img_gerakan5"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@color/green"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="@string/image_sholat_gerakan_1"
+            />
 
         <TextView
-            android:id="@+id/tv_sholat_rakaat2"
-            android:layout_width="0dp"
+            android:id="@+id/tv_sholat_gerakan5"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="8dp"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/wv_url_youtube_rakaat2"
-            tools:text="Membaca Niat" />
-
-        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
-            android:id="@+id/wv_url_youtube_rakaat3"
-            android:layout_width="0dp"
-            android:layout_height="181dp"
             android:layout_marginTop="8dp"
-            app:autoPlay="false"
-            app:layout_constraintBottom_toTopOf="@+id/tv_sholat_rakaat3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_sholat_rakaat2" />
-
-        <TextView
-            android:id="@+id/tv_sholat_rakaat3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginBottom="8dp"
             android:textColor="@color/black"
             android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/wv_url_youtube_rakaat3"
             tools:text="Membaca Niat" />
 
+        <!--        Gerakan ke 6-->
         <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
-            android:id="@+id/wv_url_youtube_rakaat4"
-            android:layout_width="0dp"
+            android:id="@+id/wv_url_youtube_gerakan6"
+            android:layout_width="match_parent"
             android:layout_height="181dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             app:autoPlay="false"
-            app:layout_constraintBottom_toTopOf="@+id/tv_sholat_rakaat4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_sholat_rakaat3" />
+         />
+
+        <ImageView
+            android:id="@+id/img_gerakan6"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@color/green"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="@string/image_sholat_gerakan_1"
+            />
 
         <TextView
-            android:id="@+id/tv_sholat_rakaat4"
-            android:layout_width="0dp"
+            android:id="@+id/tv_sholat_gerakan6"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginBottom="8dp"
             android:textColor="@color/black"
             android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/wv_url_youtube_rakaat4"
             tools:text="Membaca Niat" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--        Gerakan ke 7-->
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/wv_url_youtube_gerakan7"
+            android:layout_width="match_parent"
+            android:layout_height="181dp"
+            android:layout_marginTop="16dp"
+            app:autoPlay="false" />
+
+        <ImageView
+            android:id="@+id/img_gerakan7"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@color/green"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="@string/image_sholat_gerakan_1"
+            />
+
+        <TextView
+            android:id="@+id/tv_sholat_gerakan7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:text="Membaca Niat" />
+
+    </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.susanah.mywudhu.data.WudhuRepository
 import com.susanah.mywudhu.di.Injection
 import com.susanah.mywudhu.ui.kuis.KuisViewModel
+import com.susanah.mywudhu.ui.sholat.SholatViewModel
 import com.susanah.mywudhu.ui.surat.SuratPendekViewModel
 import com.susanah.mywudhu.ui.surat.detail.SurahDetailViewModel
 import com.susanah.mywudhu.ui.wudhu.WudhuViewModel
@@ -40,6 +41,9 @@ class ViewModelFactory private constructor(private val mWudhuRepository: WudhuRe
                 return WudhuViewModel() as T
             }
 
+            modelClass.isAssignableFrom(SholatViewModel::class.java) -> {
+                return SholatViewModel() as T
+            }
 
             else -> throw Throwable("Unknown ViewModel class: " + modelClass.name)
         }

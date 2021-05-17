@@ -6,16 +6,19 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.susanah.mywudhu.R
 import com.susanah.mywudhu.data.model.KuisCerdasModel
 import com.susanah.mywudhu.databinding.DialogResultNilaiBinding
 import com.susanah.mywudhu.databinding.FragmentKuisBinding
+import com.susanah.mywudhu.ui.surat.SuratPendekFragmentDirections
 import com.susanah.mywudhu.viewModel.ViewModelFactory
 
 class KuisFragment : Fragment() {
@@ -94,8 +97,7 @@ class KuisFragment : Fragment() {
                 for (i in 0 until data.size) {
                     listNilai.add(data[i]?.nilai!!)
                 }
-
-                nilai = listNilai.sum().toDouble() / 3
+                nilai = ( listNilai.sum().toDouble() * 2 ) / 10
             }
 
             val mDialogView = layoutInflater.inflate(R.layout.dialog_result_nilai, null)
@@ -109,10 +111,10 @@ class KuisFragment : Fragment() {
                     .setTitle("Nilai :")
             }
             val mAlertDialog = mBuilder?.show()
-            bindingDialog.tvResultNilai.text = String.format("%.1f", nilai)
+            bindingDialog.tvResultNilai.text =  String.format("%.1f", nilai).toString()
             bindingDialog.btnResultOke.setOnClickListener {
                 mAlertDialog?.dismiss()
-
+                showGridAdapter()
             }
         }
 
