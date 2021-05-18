@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
@@ -54,12 +55,21 @@ class WudhuAdapter(private val lifecycleOwner: LifecycleOwner) : RecyclerView.Ad
             val youTubePlayerView: YouTubePlayerView = binding.wvUrlYoutube
         lifecycleOwner.lifecycle.addObserver(youTubePlayerView)
 
+            if (wudhuItem.gambar == null){
+                binding.imgWudhu.visibility = View.GONE
+            } else{
+                Glide.with(itemView.context)
+                    .load(wudhuItem.gambar)
+                    .into(binding.imgWudhu)
+            }
+
+
             binding.tvWudhu.text = wudhuItem.deskripsi
             youTubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
                 override fun onReady(youTubePlayer: YouTubePlayer) {
                     val videoId = wudhuItem.url
                     if (videoId != null){
-                        youTubePlayer.loadVideo(videoId, 0f)
+                        youTubePlayer.cueVideo(videoId, 0f)
                     }else{
                         binding.wvUrlYoutube.visibility = View.GONE
                     }

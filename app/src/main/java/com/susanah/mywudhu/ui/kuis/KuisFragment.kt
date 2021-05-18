@@ -28,7 +28,6 @@ class KuisFragment : Fragment() {
     private lateinit var kuisAdapter: KuisAdapter
 
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
